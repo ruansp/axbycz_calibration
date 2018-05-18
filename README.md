@@ -9,7 +9,7 @@ The codes in this repository are organized to be self-contained, with descriptio
 1. Test files are located in the root directory, with prefix "main_": \
   (1) "main_comparison_cov.m": solvers comparisons for synthetic data, with the change of covariance of noise; \
   (2) "main_comparison_disorder.m": comparisons for synthetic data that is scrambled; \
-  (3) "main_NAO_data_analysis.m": comparions for real data collected from two NAO humanoid robot. \
+  (3) "main_NAO_data_analysis.m": comparions for real data collected from two NAO humanoid robot.
 
 2. Functions that implements different solvers are under the folder "solvers/": \
   (1) "axbyczProb1.m": proposed probabilistic solver 1; \
