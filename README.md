@@ -6,19 +6,21 @@ Authors: Qianli Ma (<mqianli1@jhu.edu>), Zachariah Goh (<zach_goh@yahoo.com>), S
 ## Repository Structure
 The codes in this repository are organized to be self-contained, with descriptions as follows:
 
-1. Test files are located in the root directory, with prefix "main_":
-  (1) "main_comparison_cov.m": solvers comparisons for synthetic data, with the change of covariance of noise;
-  (2) "main_comparison_disorder.m": comparisons for synthetic data that is scrambled;
-  (3) "main_NAO_data_analysis.m": comparions for real data collected from two NAO humanoid robot.
+1. Test files are located in the root directory, with prefix "main_": \
+  (1) "main_comparison_cov.m": solvers comparisons for synthetic data, with the change of covariance of noise; \
+  (2) "main_comparison_disorder.m": comparisons for synthetic data that is scrambled; \
+  (3) "main_NAO_data_analysis.m": comparions for real data collected from two NAO humanoid robot. \
 
-2. Functions that implements different solvers are under the folder "solvers/":
-  (1) "axbyczProb1.m": proposed probabilistic solver 1, "axbyczProb2.m": proposed probabilistic solver 2, "axbyczProb3.m": Robust iterative refinement for the proposed probabilistic solvers; 
-  (2) Other functions: implementations of other solvers for comparisons.
+2. Functions that implements different solvers are under the folder "solvers/": \
+  (1) "axbyczProb1.m": proposed probabilistic solver 1; \
+  (2) "axbyczProb2.m": proposed probabilistic solver 2; \
+  (3) "axbyczProb3.m": Robust iterative refinement for the proposed probabilistic solvers; \
+  (4) Other functions: implementations of other solvers for comparisons.
 
-3. Real experimental data collected from two humanoid robots are gathered in the folder "real_data/", with one sample trial:
-  (1) "transform_ABC_unified_fixA.mat": measured data for rigid body transforms B, C when A is fixed;
-  (2) "transform_ABC_unified_fixC.mat": measured data for rigid body transforms A, B when C is fixed;
-  (2) "transform_ABC_unified.mat": combined data of the previous two sets;
+3. Real experimental data collected from two humanoid robots are gathered in the folder "real_data/", with one sample trial: \
+  (1) "transform_ABC_unified_fixA.mat": measured data for rigid body transforms B, C when A is fixed; \
+  (2) "transform_ABC_unified_fixC.mat": measured data for rigid body transforms A, B when C is fixed; \
+  (3) "transform_ABC_unified.mat": combined data of the previous two sets.
 
 4. Supporting functions for running the solvers and test files are under "util/" folder.
 
