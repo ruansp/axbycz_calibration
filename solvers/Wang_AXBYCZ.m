@@ -7,7 +7,7 @@ function [ X, Y, Z, n_step ] = Wang_AXBYCZ( A, B, C, Xact, Yact, Zact)
 % Output: X, Y, Z are 4 x 4 homogeneous matrices
 
 num = size(A, 3); % number of measurements
-fprintf('Num of data: %d\n', num); 
+% fprintf('Num of data: %d\n', num); 
 
 %% Get rotation and translation components of A, B, C
 RA = A(1:3, 1:3, :); % 3x3xnum
@@ -30,10 +30,10 @@ RY_init = RA(:,:,1) * RX_init * RB(:,:,1) / RZ_init / RC(:,:,1);
 %     hold on
 %     trplot(Yact(1:3,1:3), 'color', 'r'); 
     
-fprintf('Err in initial guess: RX = %.5f, RY = %.5f, RZ = %.5f\n',...
-  roterror( RX_init, Xact(1:3,1:3) ), ...
-  roterror( RY_init, Yact(1:3,1:3) ),...
-  roterror( RZ_init, Zact(1:3,1:3) ) );
+% fprintf('Err in initial guess: RX = %.5f, RY = %.5f, RZ = %.5f\n',...
+%   roterror( RX_init, Xact(1:3,1:3) ), ...
+%   roterror( RY_init, Yact(1:3,1:3) ),...
+%   roterror( RZ_init, Zact(1:3,1:3) ) );
 
 % Iterate until norm of delR = [delRX; delRY; delRZ] falls below a predefined threshold
 delR = 10000 * ones(9,1);  % use a large value initially 
@@ -67,7 +67,7 @@ while (norm(delR) > .01 && n_step < 500 )
   
   delR = (F'*F) \ F' * q;  % = inv(F'F)F'q
   
-  fprintf('cost is %d \n', norm(delR))
+%   fprintf('cost is %d \n', norm(delR))
   
   thetaX = norm( delR(1:3) );
   RX_init = skewexp( delR(1:3)/thetaX, thetaX ) * RX_init;

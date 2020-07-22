@@ -10,7 +10,7 @@ function [X_final, Y_final, Z_final] = axbyczProb1(A1, B1, C1, A2, B2, C2, opt, 
 
 A1 = A1(:,:,1); C2 = C2(:,:,1);
 
-fprintf('Running Prob1 method ... \n')
+% fprintf('Running Prob1 method ... \n')
 %% ------ Solve for Z -------- %%
 % A1 fixed, B1 and C1 free
 

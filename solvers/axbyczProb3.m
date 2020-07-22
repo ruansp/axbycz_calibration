@@ -99,7 +99,7 @@ while norm(xi) >= tol && diff >= tol && num <= max_num
 %     xi = pinv(M) * b;
 %     xi = lsqminnorm(M,b);
 
-    disp(['cost is: ', num2str(norm(xi))]);
+%     disp(['cost is: ', num2str(norm(xi))]);
     
     for i = 1:Ni
         diff1 = norm(A1_m(:,:,i)*Xupdate*B1_m(:,:,i)-Yupdate*C1_m(:,:,i)*Zupdate,'fro');
@@ -131,13 +131,11 @@ while norm(xi) >= tol && diff >= tol && num <= max_num
     num = num+1;
     
     %% Error
-    
-    
     diff = metric(A1,B1,C1,Xupdate,Yupdate,Zupdate) + ...
            metric(A2,B2,C2,Xupdate,Yupdate,Zupdate);
-    disp(['diff is: ', num2str(diff)]);
+%     disp(['diff is: ', num2str(diff)]);
 end
-disp(['Number of iterations: ', num2str(num)])
+% disp(['Number of iterations: ', num2str(num)])
 end
 
 
