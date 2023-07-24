@@ -1,4 +1,6 @@
 # Probabilistic Approaches to the AXB = YCZ Calibration Problem in Multi-Robot Systems
+[![View Probabilistic method for AXB=YCZ camera calibration on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/132663-probabilistic-method-for-axb-ycz-camera-calibration)
+
 This article introduces two probabilistic solvers for the AXB=YCZ calibration problem in multi-robot systems, where A, B, C are time-varying rigid body transformations measured from sensors and X, Y, Z are unknown static transformations to be calibrated. Comparisons with other solvers have been made and the proposed probabilistic solvers are outperformed, especially in the case with the lack of correspondance of the measured data. The robustness of the proposed solvers is further improved by hybrid method and iterative refinement. This repository contains the Matlab implementations for probabilistic approaches to the AXB=YCZ calibrations problem. The work has been published in the journal of Autonomous Robots [[Link to the article]](https://rpk.lcsr.jhu.edu/publications/#Sensor_Calibration).
 
 Authors: Qianli Ma (<mqianli1@jhu.edu>), Zachariah Goh (<zach_goh@yahoo.com>), Sipu Ruan (<ruansp@jhu.edu>), Gregory S. Chirikjian (<gchirik1@jhu.edu>).
